@@ -12,7 +12,7 @@ $cnpj = $_POST['cnpj'];
 $Telefone = $_POST['Telefone'];
  
  
-include 'cnx.php';
+include 'conexão.php';
 
 //Dados para inserir os dados
 $insert = "INSERT INTO tb_cliente VALUES (NULL,'$cliente','$email','$endereço','$nr_endereço','$cpf' '$cnpj', '$Telefone')";
