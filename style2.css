@@ -21,10 +21,24 @@ color: rgb(165, 15, 235);
 
 
 .btn{
- color:rgb(245, 245, 245);
+ color:rgb(155, 22, 22);
  width: 30%;
 }
 
 a {
 margin-top: auto;
 }
+.navbar{
+    background-color: aqua;
+}
+
+.navbar ul li a{
+    color: rgb(161, 161, 15);
+}
+.body2{
+background-color: aqua;
+}
+.fa-solid{
+    color: rgb(35, 16, 206);
+    font-size: 30px;
+    }

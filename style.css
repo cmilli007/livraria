@@ -22,7 +22,7 @@ color: aliceblue;
 
 .form-text
 {
-color: rgb(220, 235, 15);
+color: rgb(254, 255, 246);
 }
 
 
@@ -33,4 +33,18 @@ color: rgb(220, 235, 15);
 
 a {
 margin-top: auto;
+}
+
+.navbar {
+    background-color: aqua;
+}
+.navbar ul li a{
+    color: rgb(161, 161, 15);
+}
+.body2{
+background-color: aqua;
+}
+.fa-solid{
+color: aliceblue;
+font-size: 30px;
 }
