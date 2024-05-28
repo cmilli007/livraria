@@ -22,7 +22,7 @@ color: aliceblue;
 
 .form-text
 {
-color: rgb(254, 255, 246);
+color: rgb(255, 255, 255);
 }
 
 
@@ -36,10 +36,10 @@ margin-top: auto;
 }
 
 .navbar {
-    background-color: aqua;
+    background-color: rgb(4, 112, 184);
 }
 .navbar ul li a{
-    color: rgb(161, 161, 15);
+    color: rgb(122, 11, 133);
 }
 .body2{
 background-color: aqua;
@@ -47,4 +47,16 @@ background-color: aqua;
 .fa-solid{
 color: aliceblue;
 font-size: 30px;
+}
+
+.icon{
+    color: aquamarine;
+}
+.icon2{
+    color: brown;
+}
+
+.table{
+    width: 180px;
+    height: 180px;
 }

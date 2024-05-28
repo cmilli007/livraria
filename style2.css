@@ -28,17 +28,26 @@ color: rgb(165, 15, 235);
 a {
 margin-top: auto;
 }
-.navbar{
+.nav{
     background-color: aqua;
 }
 
-.navbar ul li a{
-    color: rgb(161, 161, 15);
-}
 .body2{
 background-color: aqua;
 }
 .fa-solid{
     color: rgb(35, 16, 206);
     font-size: 30px;
+    }
+
+    .icon{
+        color: aquamarine;
+    }
+    .icon2{
+        color: brown;
+    }
+
+    .table{
+        width: 90px;
+        height: 90px;
     }

@@ -15,34 +15,34 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <title>Cadastro da Editora</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid ">
-            <h1 class="navbar-brand text-light">Livraria</h1>
-            <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="menu" class="collapse navbar-collapse justify-content-end">
-                <ul class="navbar-nav nav-menu ">
-                    <li class="nav-item"><a class="nav-link text-light" href="cadastro_user.html" activate>Cadastrar Cliente</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="cadastro_editora.html">Cadastrar Editora</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="c_cliente.php">Relatório Cliente</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="listar_editora.php">Relatório Editora</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="listar_user.php">Relatório Usuário</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="index.html">Sair</a></li>
-                </ul>
+            <div class="container-fluid ">
+                <h1 class="navbar-brand text-light">Livraria</h1>
+                <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="menu" class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav nav-menu ">
+                        <li class="nav-item"><a class="nav-link text-light" href="c_cliente.html" activate>Cadastrar Cliente</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="cadastro_editora.html">Cadastrar Editora</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="c_cliente.php">Relatório Cliente</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="cadastro_livraria.php">Relatório Editora</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="listar_user.php">Relatório Usuário</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="index.html">Sair</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+          <div class="col">
     <h1 class="text-center text-light mt-5 menor">Cadastro da Editora</h1>
     <section class="container tag">
     <div class="container text-center geraldo">
         <div class="row">
             <div class="col"></div>
             <div class="col">
-                <form class="user" action="insert_editora.php" method="post">
+                <form class="user" action="cadastro_livraria.php" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Editora</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" name="nm_editora">
@@ -73,4 +73,17 @@
             </div>
         </div>
         <div class="col end-col"></div>
-    
+    </div>
+</form>
+</div>
+<div class="col">
+
+</div>
+</div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

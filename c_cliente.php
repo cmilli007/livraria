@@ -6,15 +6,15 @@
 $cliente = $_POST['cliente'];
 $endereço = $_POST['endereço'];
 $nr_endereço = $_POST['nr_endereço'];
-$cpf = $_POST['cpf'];
-$cnpj = $_POST['cnpj'];
-$Telefone = $_POST['Telefone'];
+$nr_cpf = $_POST['cpf'];
+$nr_cnpj = $_POST['cnpj'];
+$nr_telefone = $_POST['Telefone'];
  
  
 include 'conexao.php';
 
 //Dados para inserir os dados
-$insert = "INSERT INTO tb_cliente VALUES (NULL,'$cliente','$endereço','$nr_endereço','$cpf' '$cnpj', '$Telefone')";
+$insert = "INSERT INTO tb_cliente VALUES (NULL,'$cliente','$endereço','$nr_endereço','$nr_cpf' '$nr_cnpj', '$nr_telefone')";
 
 
 ?>
