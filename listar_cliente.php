@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
+    <!--Link CSS do BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!--Link CSS do Meu CSS-->
     <link rel="stylesheet" href="style.css">
-</head>
+      <!--Link CSS do Font Awesome para Icones-->
+    <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
+    
+  </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-escuro">
     <div class="container-fluid">
@@ -39,43 +44,39 @@
       </div>
     </div>
   </nav>
-<body>
-      <div class="container text-center">
-        <div class="row">
-            <div class="col"></div>
-          <div class="col">
-            <form class="user" action="insert_user.php" method="post">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="nome" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Setor</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="setor" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Login</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="login" aria-describedby="emailHelp">
-                  </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Senha</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" name="senha">
-                </div>
-                <div class="botao">
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    <a class="btn btn-warning" href="index.html" role="button">Voltar</a>
-                </div>
-                                                                  
-            </form>
-          </div>
-          <div class="col">
-       
-          </div>
-        </div>
-      </div>
+    <div class="container">
 
+    <h2>Listar usuarios</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Setor</th>
+      <th scope="col">Login</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    include 'conexao.php';
+    $select = "SELECT * FROM tb_user";
+    $query = mysqli_query($conexao,$select);
+    while ($result =  mysqli_fetch_array($query)) { ?>
+<tr>
+      <td scope="row"><?php echo $result['id_user']; ?></td>
+      <td> <?php echo $result['nm_user']; ?></td>
+      <td><?php echo $result['setor']; ?></td>
+      <td><?php echo $result['login']; ?></td>
+    </tr>
+
+<?php } ?>
     
+ </tbody>
+</table>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

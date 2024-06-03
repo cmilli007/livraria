@@ -4,86 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
- 
+    <!--Link CSS do BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- 
+     <!--Link CSS do Meu CSS-->
     <link rel="stylesheet" href="style.css">
+      <!--Link CSS do Font Awesome para Icones-->
     <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
- 
-</head>
+    
+  </head>
 <body>
-  <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid ">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-book-open-reader"></i></a>
-              <h1 class="navbar-brand text-light">Livraria</h1>
-              <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#menu"
-                  aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div id="menu" class="collapse navbar-collapse justify-content-end">
-                  <ul class="navbar-nav nav-menu ">
-                      <li class="nav-item"><a class="nav-link text-light" href="c_cliente.html" activate>Cadastrar Cliente</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="cadastro_livraria.html">Cadastrar Editora</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="c_cliente.php">Relatório Cliente</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="cadastro_livraria.php">Relatório Editora</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="listar_user.php">Relatório Usuário</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="index.html">Sair</a></li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg bg-escuro">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-book-open-reader"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="C_cliente.html">Cadastro de Cliente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastro_livraria.html">Cadastro Editora</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Relatórios
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" style="color: black;"  href="listar_user.php">Lista de Usuarios</a></li>
+              <li><a class="dropdown-item" style="color: black;"listar_cliente.php">Lista de Clientes</a></li>
+              <li><a class="dropdown-item"style="color: black;"  href="listar_editora.php">Lista de Editoras</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <div class="container text-center">
         <div class="row">
+            <div class="col"></div>
           <div class="col">
-           
-          </div>
-          <div class="col">
-            <!-- <div> <img class="image" src="imagens/livros.png" alt="livros"> </div> -->
-            <form action="c_cliente.php" method="post" class="user">
+            <form class="user" action="insert_cliente.php" method="post">
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Nome:</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="cliente">
+                  <label for="exampleInputEmail1" class="form-label">Nome do Cliente</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="nm_cliente" aria-describedby="emailHelp">
                 </div>
-             <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Endereço:</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" aria-activedescendant="emailHelp" name="endereço">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Número do Endereço:</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" aria-activedescendant="emailHelp" name="nr_endereço">
-                  </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">CPF:</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="nr_cpf">
+                  <label for="exampleInputEmail1" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="nm_endereco" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Numero</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="nr_endereco" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">CNPJ:</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="nr_cnpj">
+                    <label for="exampleInputEmail1" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nr_cpf" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Telefone:</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="nr_telefone">
+                    <label for="exampleInputEmail1" class="form-label">CNJP</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nr_cnpj" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nr_telefone" aria-describedby="emailHelp">
                   </div>
                 <div class="botao">
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    <a class="btn btn-danger" href="index.html" role="button">Voltar</a>
-                
- 
- 
                 </div>
-              </form>
+                                                                  
+            </form>
           </div>
           <div class="col">
-           
+       
           </div>
         </div>
       </div>
- 
-   
- 
+
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
